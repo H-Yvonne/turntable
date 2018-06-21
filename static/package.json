@@ -1,0 +1,27 @@
+{
+    "name": "turntable",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "HY",
+    "license": "ISC",
+    "dependencies": {
+        "babel-core": "6.26.0",
+        "babel-loader": "6.2.5",
+        "babel-polyfill": "6.26.0",
+        "babel-preset-es2015": "6.16.0",
+        "babel-preset-stage-1": "6.16.0",
+        "gulp": "3.9.1",
+        "gulp-if": "2.0.2",
+        "gulp-load-plugins": "1.4.0",
+        "gulp-minify-css": "1.2.4",
+        "gulp-sass": "3.1.0",
+        "gulp-sourcemaps": "2.6.4",
+        "gulp-uglify": "3.0.0",
+        "gulp-webpack": "1.5.0",
+        "webpack": "1.13.2"
+    }
+}
