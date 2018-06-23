@@ -1,0 +1,682 @@
+@import "../core/_setting.scss";
+@import "../core/_reset.scss";
+@import "../core/_css3";
+@import "../core/_mixin";
+@import "../core/_media_queries";
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    // -webkit-user-select: none;
+}
+
+select,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+    background-color: #f6f6f6;
+    font-size: 24px;
+    overflow: hidden;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.list-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 per(30, 750);
+    background-color: #f6f6f6;
+}
+
+.turntable-icons {
+    background: url(../../images/index/index-icons.png) no-repeat;
+    background-size: rem(681, 24) rem(500, 24);
+}
+
+.list-title-wrap {
+    padding: rem(17, 24) per(20, 690) rem(16, 24) per(5, 690);
+}
+
+.list-title-tips {
+    padding-top: rem(11, 24);
+    i {
+        display: block;
+        width: rem(30, 24);
+        height: rem(30, 24);
+        // padding-left: rem(2, 24);
+        margin: 0 rem(10, 24) 0 0;
+        text-align: center;
+        line-height: rem(28, 24);
+        font-style: normal;
+        font-weight: bold;
+        color: #f30000;
+        border: rem(2, 24) solid #f30000;
+        border-radius: 50%;
+    }
+    u {
+        line-height: rem(30, 24);
+        font-size: rem(24, 24);
+        color: #999;
+        text-decoration: none;
+    }
+}
+
+.list-common-btn {
+    display: block;
+    min-width: rem(114, 24);
+    height: rem(56, 24);
+    padding: 0 rem(10, 24);
+    text-align: center;
+    line-height: rem(48, 24);
+    background-color: #ff7428;
+    border: rem(4, 24) solid #ffd887;
+    border-radius: rem(10, 24);
+    font-size: rem(24, 24);
+    color: white;
+    &:hover {
+        color: white;
+    }
+}
+
+.list-common-disablebtn {
+    opacity: .4;
+}
+
+.list-award-finish {
+    margin-top: rem(3, 24);
+    font-size: rem(22, 24);
+    color: #78d366;
+}
+
+.list-award-list {
+    .it {
+        float: left;
+        width: 100%;
+        padding: rem(22, 24) per(16, 690) rem(13, 24) per(20, 690);
+        margin-bottom: rem(20, 24);
+        background-color: #fff3d7;
+        border: rem(4, 24) solid #eeca7e;
+        border-radius: rem(10, 24);
+    }
+}
+
+.list-award-detailinfo {
+    display: none;
+    margin-top: rem(10, 24);
+}
+
+.list-award-imgwarp {
+    position: relative;
+    width: rem(126, 24);
+    height: rem(126, 24);
+    margin-right: rem(24, 24);
+    border-radius: rem(8, 24);
+    background-color: white;
+    overflow: hidden;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    i {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        font-size: rem(24, 24);
+        line-height: rem(20, 24);
+        color: white;
+        font-style: normal;
+        border-width: rem(23, 24);
+        border-color: transparent #ff7428 #ff7428 transparent;
+        border-style: dashed solid solid dashed;
+    }
+}
+
+.list-award-info {
+    .name {
+        // margin-top: rem(5, 24);
+        font-size: rem(30, 24);
+        color: #333;
+        span {
+            margin: 0 rem(20, 24);
+        }
+        u {
+            color: #ff0000;
+            text-decoration: none;
+        }
+    }
+    .deadline {
+        height: rem(55, 24);
+        padding-top: rem(8, 24);
+        font-size: rem(22, 24);
+        color: #999;
+        u {
+            margin: 0 rem(10, 24);
+            color: #ff7428;
+            text-decoration: none;
+        }
+    }
+    a {
+        display: block;
+        width: rem(130, 24);
+        u {
+            margin-right: rem(12, 24);
+            font-size: rem(22, 24);
+            color: #999;
+            text-decoration: none;
+        }
+        i {
+            display: block;
+            width: rem(10, 24);
+            height: rem(10, 24);
+            margin-top: rem(8, 24);
+            border-top: rem(2, 24) solid #999;
+            border-right: rem(2, 24) solid #999;
+        }
+    }
+    .list-btn-expand {
+        i {
+            transform: rotate(135deg);
+        }
+    }
+    .list-btn-retract {
+        display: none;
+        i {
+            margin-top: rem(13, 24);
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.it-expand {
+    .list-award-info {
+        .list-btn-expand {
+            display: none;
+        }
+        .list-btn-retract {
+            display: block;
+        }
+    }
+    .list-award-detailinfo {
+        display: block;
+    }
+}
+
+.list-award-baseinfo {
+    .list-common-btn {
+        margin-top: rem(9, 24);
+    }
+}
+
+.list-deadline-text {
+    line-height: rem(39, 24);
+    font-size: rem(22, 24);
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    u {
+        color: #ff433b;
+        text-decoration: none;
+    }
+}
+
+.turntable-dialog-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+.turntable-dialog-mdBg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: rem(590, 24);
+    height: rem(839, 24);
+    padding: rem(65, 24) rem(49, 24) 0;
+    margin: rem(-419.5, 24) 0 0 rem(-295, 24);
+    background: url(../../images/index/dialog-md-bg.png) no-repeat;
+    background-size: rem(590, 24) rem(839, 24);
+    filter: drop-shadow(0 0 rem(24, 24) rgba(0, 0, 0, .4));
+}
+
+.turntable-dialog-lgBg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: rem(590, 24);
+    height: rem(952, 24);
+    padding: rem(65, 24) rem(37, 24) 0;
+    margin: rem(-476, 24) 0 0 rem(-295, 24);
+    background: url(../../images/index/dialog-lg-bg.png) no-repeat;
+    background-size: rem(590, 24) rem(952, 24);
+    filter: drop-shadow(0 0 rem(24, 24) rgba(0, 0, 0, .4));
+}
+
+.turntable-dialog-head {
+    position: absolute;
+    top: rem(-46, 24);
+    left: 50%;
+    width: rem(381, 24);
+    height: rem(92, 24);
+    margin-left: rem(-190.5, 24);
+    text-align: center;
+    line-height: rem(67, 24);
+    font-size: rem(36, 24);
+    font-weight: bold;
+    color: #fdf853;
+    background-position: rem(-21, 24) rem(-258, 24);
+    text-shadow: rem(2, 24) 0 1px #af6334, rem(-2, 24) 0 1px #af6334, 0 rem(2, 24) 1px #af6334, 0 rem(-2, 24) 1px #af6334;
+}
+
+.turntable-dialog-close {
+    position: absolute;
+    top: rem(-9, 24);
+    right: rem(-7, 24);
+    display: block;
+    width: rem(74, 24);
+    height: rem(74, 24);
+    background-position: rem(-21, 24) rem(-154, 24);
+}
+
+.dialog-common-title {
+    width: 100%;
+    height: rem(119, 24);
+    padding: rem(16, 24) 0 0 rem(29, 24);
+    margin-bottom: rem(24, 24);
+    background: #f6dd98;
+    color: #aa5915;
+    border-radius: rem(10, 24);
+    i {
+        filter: drop-shadow(0 0 rem(10, 24) rgba(0, 0, 0, .4));
+    }
+    b {
+        color: #ff0000;
+    }
+    .title {
+        margin: rem(8, 24) 0 rem(5, 24);
+        font-size: rem(28, 24);
+        font-weight: bold;
+    }
+    .text {
+        font-size: rem(22, 24);
+    }
+}
+
+.dialog-common-list {
+    .it {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: rem(128, 24);
+        padding: rem(8, 24);
+        margin-bottom: rem(10, 24);
+        border-radius: rem(10, 24);
+        background-color: rgba(232, 159, 53, .2);
+        box-shadow: 0 rem(3, 24) rem(5, 24) rgba(255, 255, 255, .2) inset, 0 rem(-3, 24) rem(5, 24) rgba(255, 255, 255, .4) inset, 0 rem(3, 24) 1px #ffd483;
+    }
+}
+
+.dialog-common-item {
+    width: 100%;
+    height: 100%;
+    background-color: #efc244;
+    border-radius: rem(8, 24);
+    box-shadow: 0 rem(15, 24) rem(40, 24) rgba(233, 170, 0, .5) inset, rem(10, 24) 0 rem(40, 24) rgba(233, 170, 0, .5) inset;
+}
+
+.dialog-send-title {
+    padding: rem(16, 24) 0 0 rem(18, 24);
+    i {
+        display: block;
+        width: rem(110, 24);
+        height: rem(73, 24);
+        margin: rem(8, 24) rem(22, 24) 0 0;
+        background-position: rem(-365, 24) rem(-155, 24);
+    }
+}
+
+.dialog-send-item {
+    padding: rem(12, 24) rem(16, 24) 0 rem(14, 24);
+    .dialog-send-img {
+        width: rem(100, 24);
+        height: rem(88, 24);
+        margin-right: rem(20, 24);
+        text-align: center;
+        border-radius: rem(5, 24);
+        background-color: #fff3cc;
+        overflow: hidden;
+        box-shadow: 0 rem(30, 24) rem(20, 24) rgba(255, 238, 184, 1) inset;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .dialog-send-name {
+        line-height: rem(88, 24);
+        font-size: rem(24, 24);
+        color: #ab591f;
+    }
+}
+
+.dialog-send-checkbox {
+    position: relative;
+    width: rem(52, 24);
+    height: rem(52, 24);
+    margin-top: rem(17, 24);
+}
+
+.dialog-send-checkbox input[type="checkbox"] {
+    opacity: 0;
+    margin-left: 5px;
+}
+
+.dialog-send-checkbox input[type="checkbox"]+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.dialog-send-checkbox input[type="checkbox"],
+.dialog-send-checkbox input[type="checkbox"]+label:after {
+    display: inline-block;
+    width: rem(52, 24);
+    height: rem(52, 24);
+}
+
+.dialog-send-checkbox input[type="checkbox"]+label:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../../images/index/index-icons.png) no-repeat;
+    background-size: rem(681, 24) rem(500, 24);
+}
+
+.dialog-send-checkbox input[type="checkbox"]+label:after {
+    background-position: rem(-618, 24) rem(-13, 24);
+}
+
+.dialog-send-checkbox input[type="checkbox"]:checked+label:after {
+    background-position: rem(-618, 24) rem(-96, 24);
+}
+
+.dialog-send-wrap {
+    height: rem(560, 24);
+    overflow: auto;
+    .dialog-common-list {
+        .it {
+            margin-bottom: rem(17, 24);
+        }
+    }
+}
+
+.dialog-send-btn {
+    position: absolute;
+    bottom: rem(60, 24);
+    left: 50%;
+    display: block;
+    width: rem(270, 24);
+    height: rem(98, 24);
+    margin-left: rem(-135, 24);
+    text-align: center;
+    line-height: rem(98, 24);
+    font-size: rem(28, 24);
+    font-weight: bold;
+    color: #ff7831;
+    background-position: rem(-35, 24) rem(-377, 24);
+    filter: drop-shadow(0 0 rem(10, 24) rgba(0, 0, 0, .4));
+    &:hover {
+        color: #ff7831;
+    }
+}
+
+.dialog-award-wrap {
+    height: rem(220, 24);
+    // text-align: center;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+// .dialog-award-inner {
+//     // width: 100%;
+// }
+.dialog-award-list {
+    width: rem(576, 24);
+    height: 100%;
+    margin: 0 auto;
+    .it {
+        float: left;
+        width: rem(170, 24);
+        margin: 0 rem(11, 24);
+    }
+}
+
+.dialog-award-item {
+    width: rem(170, 24);
+    height: rem(155, 24);
+    padding: rem(8, 24);
+    border-radius: rem(10, 24);
+    background-color: rgba(232, 159, 53, .2);
+    box-shadow: 0 rem(3, 24) rem(5, 24) rgba(255, 255, 255, .2) inset, 0 rem(-3, 24) rem(5, 24) rgba(255, 255, 255, .4) inset, 0 rem(3, 24) 1px #ffd483;
+}
+
+.dialog-award-img {
+    width: 100%;
+    height: 100%;
+    background-color: #efc244;
+    border-radius: rem(8, 24);
+    box-shadow: 0 rem(15, 24) rem(40, 24) rgba(233, 170, 0, .5) inset, rem(10, 24) 0 rem(40, 24) rgba(233, 170, 0, .5) inset;
+    overflow: hidden;
+}
+
+.dialog-award-name {
+    width: 100%;
+    margin-top: rem(15, 24);
+    text-align: center;
+    font-size: rem(28, 24);
+    color: #c8641d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dialog-award-label {
+    position: relative;
+    height: rem(24, 24);
+    margin-bottom: rem(40, 24);
+    i {
+        position: absolute;
+        top: rem(4, 24);
+        left: 0;
+        display: block;
+        width: 100%;
+        height: rem(9, 24);
+        border-bottom: 2px dashed #edc494;
+    }
+    span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        width: rem(246, 24);
+        height: rem(24, 24);
+        margin-left: rem(-123, 24);
+        text-align: center;
+        line-height: rem(24, 24);
+        font-size: rem(22, 24);
+        color: #cb6e28;
+        background-color: #fff3cd;
+    }
+}
+
+.dialog-award-addrwarp {
+    width: 100%;
+    height: rem(295, 24);
+    padding: rem(15, 24) rem(20, 24) 0 rem(30, 24);
+    background-color: #ffd895;
+    border-radius: rem(20, 24);
+}
+
+.dialog-addr-list {
+    .it {
+        float: left;
+        width: 100%;
+        margin-bottom: rem(27, 24);
+    }
+    .icon-name {
+        display: block;
+        width: rem(28, 24);
+        height: rem(28, 24);
+        margin: rem(16, 24) rem(13, 24) 0 0;
+        background-position: rem(-558, 24) rem(-14, 24);
+    }
+    .icon-addr {
+        display: block;
+        width: rem(30, 24);
+        height: rem(38, 24);
+        margin: rem(18, 24) rem(11, 24) 0 0;
+        background-position: rem(-560, 24) rem(-70, 24);
+    }
+    .icon-phone {
+        display: block;
+        width: rem(26, 24);
+        height: rem(35, 24);
+        margin: rem(17, 24) rem(16, 24) 0 0;
+        background-position: rem(-565, 24) rem(-142, 24);
+    }
+    .addr-input {
+        width: rem(400, 24);
+        height: rem(63, 24);
+        padding: rem(20, 24) rem(6, 24);
+        line-height: rem(23, 24);
+        font-size: rem(28, 24);
+        color: #c36800;
+        border: none;
+        background: none;
+        border-bottom: 1px solid #f3c277;
+        border-radius: 0;
+        &:focus {
+            outline: none;
+        }
+    }
+    .addr-input::-webkit-input-placeholder {
+        color: rgba(195, 104, 0, .2);
+    }
+    .addr-input::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: rgba(195, 104, 0, .2);
+    }
+    .addr-input:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: rgba(195, 104, 0, .2);
+    }
+    .addr-input:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: rgba(195, 104, 0, .2);
+    }
+}
+
+@include max-screen(1024px) {
+    html,
+    body {
+        font-size: 22px;
+    }
+}
+
+@include min-screen(1024px) {
+    html,
+    body {
+        font-size: 28px;
+    }
+}
+
+@include max-screen(750px) {
+    html,
+    body {
+        font-size: 22px;
+    }
+}
+
+@include max-screen(640px) {
+    html,
+    body {
+        font-size: 20px;
+    }
+}
+
+@include max-screen(480px) {
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+
+@include max-screen(384px) {
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+
+@include max-screen(320px) {
+    html,
+    body {
+        font-size: 10px;
+    }
+}
+
+// @include max-screen-height(480px) {
+//     .turntable-rule-btn {
+//         margin: rem(39, 24) rem(30, 24) rem(30, 24) 0;
+//     }
+//     .turntable-decorate-wrap {
+//         margin-top: rem(-300, 24);
+//     }
+//     .turntable-start-btn {
+//         margin: rem(-115, 24) auto 0;
+//     }
+// }

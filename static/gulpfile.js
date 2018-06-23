@@ -106,7 +106,8 @@ gulp.task('online:static', () => {
 const webpackConfig = {
     watch: true,
     entry: {
-        'index/index': './src/js/index/index.js'
+        'index/index': './src/js/index/index.js',
+        'list/index': './src/js/list/index.js'
     },
     output: {
         filename: './js/[name].js',
